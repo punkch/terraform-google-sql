@@ -93,6 +93,12 @@ variable "mysql_binary_log_enabled" {
   default     = true
 }
 
+variable "point_in_time_recovery_enabled" {
+  description = "Enables point in time recovery for PostgreSQL Instances. Will restart the database if enabled after instance creation."
+  type        = bool
+  default     = false
+}
+
 variable "maintenance_window_day" {
   description = "Day of week (1-7), starting on Monday, on which system maintenance can occur. Performance may be degraded or there may even be a downtime during maintenance windows."
   type        = number
